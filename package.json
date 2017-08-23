@@ -1,7 +1,7 @@
 {
   "name": "BlocksSkeleton",
   "version": "1.0",
-  "description": "Skeleton starter kit for bringing consistency and standards to builds for BLOCKS apps with Aurelia and TypeScript.",
+  "description": "Skeleton starter kit for bringing consistency to builds for BLOCKS apps with Aurelia and TypeScript.",
   "keywords": [
     "aurelia",
     "blocks",

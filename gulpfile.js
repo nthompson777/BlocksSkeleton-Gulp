@@ -30,32 +30,25 @@ require('require-dir')('build/tasks');
 
 gulp.task('start', ['watch', 'styles-copy', 'blocks-watch', 'blocks-minify']);
 
-
-// Copy our Component/Content Fonts to public folder relative to compiled CSS file
-gulp.task('fonts-copy', function () {
-  return gulp.src(['../../../../Components/*/fonts/*', '../../../../Content/*/fonts/*',])
-  .pipe(flatten())
-  .pipe(gulp.dest('../../../../Content/fonts'));
-});
-
-
-// Copy compiled CSS to BLOCKS Skeleton folder for Debugging (relative to compiled CSS file)
-gulp.task('styles-copy', function () {
-  return gulp.src('../../../../Content/Blocks/Apps/styles-skeleton-blocks/institutions/ifa/dist/main.css')
-  .pipe(gulp.dest('./styles'));
-});
-
 // Sass/CSS Files - the folder, files to look for, and destination
 var paths = {
   styles: {
     src: '../../../../Content/global',
-    files: '../../../../Content/global/**/*.scss',
+    skeletonTempCSS: '../../../../Content/Blocks/Apps/BlocksSkeleton/institutions/ifa/dist/main.css',
     blocks: '../../../../Content/Blocks/**/*/*.scss',
     // directories to exclude (from compiling, etc.)
     exclude: ['!../../../../Content/global/scss_converted/**/*', '!../../../../Components/**/*'],
     dest: '../../../../Content/global'
   }
 };
+
+// Copy compiled CSS to BLOCKS Skeleton folder for Debugging (relative to compiled CSS file)
+gulp.task('styles-copy', function () {
+  return gulp.src(paths.styles.skeletonTempCSS)
+  .pipe(gulp.dest('./styles'));
+});
+
+
 
 // --------------------------------------------------------------------------------------------------------
 // BLOCKS -- Watch for changes to our Sass files on Blocks Pages - Run task seperately/independently!!!
