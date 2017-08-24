@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Nate Thompson",
+      "authorEmail": "nthompson@pietech.com",
+      "authorUrl": "N/A"
+    }
+  }
+}
