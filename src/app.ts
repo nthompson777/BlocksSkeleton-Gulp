@@ -6,8 +6,8 @@ export class App {
   public configureRouter(config: RouterConfiguration, router: Router) {
     config.title = 'BLOCK NAME HERE';
     config.map([
-      { route: ['', 'welcome'], name: 'welcome',      moduleId: 'welcome',      nav: true, title: 'LINK 1' },
-      { route: 'users',         name: 'users',        moduleId: 'users',        nav: true, title: 'LINK 2' },
+      { route: ['', 'home'], name: 'home', moduleId: 'home/home', nav: true, title: 'Home' },
+      { route: 'link2', name: 'link2', moduleId: 'link2', nav: true, title: '[LINK 2]' },
       { route: 'child-router',  name: 'child-router', moduleId: 'child-router', nav: true, title: 'LINK 3' }
     ]);
 
