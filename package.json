@@ -28,6 +28,7 @@
   "devDependencies": {
     "animate-scss": "^3.2.1",
     "aurelia-bundler": "^0.4.0",
+    "aurelia-cli": "^0.31.3",
     "aurelia-protractor-plugin": "^1.0.0",
     "aurelia-tools": "^1.0.0",
     "autoprefixer": "^6.6.1",

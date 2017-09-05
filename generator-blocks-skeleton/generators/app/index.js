@@ -7,14 +7,15 @@ module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the smashing ' + chalk.red('generator-blocks-skeleton') + ' generator!'
+      'Yeah, this is the ' + chalk.red('Blocks-Skeleton') +  '\n generator. Awesome shit, huh?!'
     ));
 
     const prompts = [{
-      type: 'confirm',
-      name: 'someAnswer',
-      message: 'Would you like to enable this option?',
-      default: true
+      type: 'input',
+      name: 'name',
+      message: 'Your project name',
+      //Defaults to the project's folder name if the input is skipped
+      default: this.appname
     }];
 
     return this.prompt(prompts).then(props => {

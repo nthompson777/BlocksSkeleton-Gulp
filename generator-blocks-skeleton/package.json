@@ -1,6 +1,6 @@
 {
   "name": "generator-blocks-skeleton",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Skeleton Starter Kit for Blocks apps (TypeScript) with Aurelia CLI build.",
   "homepage": "http://moneyguidepro.com",
   "author": {
@@ -9,7 +9,7 @@
     "url": "N/A"
   },
   "files": [
-    "generators"
+    "app"
   ],
   "main": "generators/index.js",
   "keywords": [
